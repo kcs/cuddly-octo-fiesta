@@ -1,0 +1,11 @@
+#Rules for AVR programmers
+
+SUBSYSTEM!="usb_device", ACTION!="add", GOTO="objdev_rules_end"
+#USBASP
+ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="05dc", GROUP="avr", MODE="0660"
+ATTRS{idVendor}=="1781", ATTRS{idProduct}=="0c9f", GROUP="avr", MODE="0660"
+
+#xmegaB1 Xplained
+ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2fea", GROUP="avr", MODE="0660"
+
+LABEL="objdev_rules_end"
